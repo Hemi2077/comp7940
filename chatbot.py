@@ -1,209 +1,70 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "id": "38587706",
-   "metadata": {},
-   "outputs": [
-    {
-     "ename": "SyntaxError",
-     "evalue": "invalid syntax (2246643796.py, line 1)",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;36m  Input \u001b[1;32mIn [5]\u001b[1;36m\u001b[0m\n\u001b[1;33m    pip install -r requirements.txt\u001b[0m\n\u001b[1;37m        ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
-     ]
-    }
-   ],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "4bfee7fa",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "2023-02-17 23:23:12,758 - apscheduler.scheduler - INFO - Scheduler started\n",
-      "2023-02-17 23:23:23,165 - root - INFO - Update: {'update_id': 52020967, 'message': {'channel_chat_created': False, 'new_chat_photo': [], 'supergroup_chat_created': False, 'delete_chat_photo': False, 'photo': [], 'message_id': 48, 'date': 1676647403, 'new_chat_members': [], 'entities': [], 'group_chat_created': False, 'caption_entities': [], 'chat': {'id': 6186937510, 'last_name': 'Yue', 'first_name': 'M', 'type': 'private'}, 'text': 'aaa', 'from': {'is_bot': False, 'id': 6186937510, 'language_code': 'zh-hans', 'last_name': 'Yue', 'first_name': 'M'}}}\n",
-      "2023-02-17 23:23:23,167 - root - INFO - context: <telegram.ext.callbackcontext.CallbackContext object at 0x000001DEE76BF190>\n",
-      "2023-02-17 23:23:44,535 - root - INFO - aaa\n",
-      "2023-02-17 23:24:05,785 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.\n",
-      "Traceback (most recent call last):\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 715, in connect\n",
-      "    sock = self.retry.call_with_retry(\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\retry.py\", line 46, in call_with_retry\n",
-      "    return do()\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 716, in <lambda>\n",
-      "    lambda: self._connect(), lambda error: self.disconnect(error)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 781, in _connect\n",
-      "    raise err\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 769, in _connect\n",
-      "    sock.connect(socket_address)\n",
-      "TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。\n",
-      "\n",
-      "During handling of the above exception, another exception occurred:\n",
-      "\n",
-      "Traceback (most recent call last):\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\telegram\\ext\\dispatcher.py\", line 555, in process_update\n",
-      "    handler.handle_update(update, self, check, context)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\telegram\\ext\\handler.py\", line 198, in handle_update\n",
-      "    return self.callback(update, context)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Local\\Temp\\ipykernel_20768\\290205628.py\", line 52, in add\n",
-      "    redis1.incr(msg)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\commands\\core.py\", line 1914, in incrby\n",
-      "    return self.execute_command(\"INCRBY\", name, amount)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\client.py\", line 1255, in execute_command\n",
-      "    conn = self.connection or pool.get_connection(command_name, **options)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 1481, in get_connection\n",
-      "    connection.connect()\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 721, in connect\n",
-      "    raise ConnectionError(self._error_message(e))\n",
-      "redis.exceptions.ConnectionError: Error 10060 connecting to redis-11886.c241.us-east-1-4.ec2.cloud.redislabs.com:18524. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.\n",
-      "2023-02-17 23:24:05,829 - root - INFO - aaa\n",
-      "2023-02-17 23:24:26,947 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.\n",
-      "Traceback (most recent call last):\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 715, in connect\n",
-      "    sock = self.retry.call_with_retry(\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\retry.py\", line 46, in call_with_retry\n",
-      "    return do()\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 716, in <lambda>\n",
-      "    lambda: self._connect(), lambda error: self.disconnect(error)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 781, in _connect\n",
-      "    raise err\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 769, in _connect\n",
-      "    sock.connect(socket_address)\n",
-      "TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。\n",
-      "\n",
-      "During handling of the above exception, another exception occurred:\n",
-      "\n",
-      "Traceback (most recent call last):\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\telegram\\ext\\dispatcher.py\", line 555, in process_update\n",
-      "    handler.handle_update(update, self, check, context)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\telegram\\ext\\handler.py\", line 198, in handle_update\n",
-      "    return self.callback(update, context)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Local\\Temp\\ipykernel_20768\\290205628.py\", line 52, in add\n",
-      "    redis1.incr(msg)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\commands\\core.py\", line 1914, in incrby\n",
-      "    return self.execute_command(\"INCRBY\", name, amount)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\client.py\", line 1255, in execute_command\n",
-      "    conn = self.connection or pool.get_connection(command_name, **options)\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 1481, in get_connection\n",
-      "    connection.connect()\n",
-      "  File \"C:\\Users\\13594\\AppData\\Roaming\\Python\\Python39\\site-packages\\redis\\connection.py\", line 721, in connect\n",
-      "    raise ConnectionError(self._error_message(e))\n",
-      "redis.exceptions.ConnectionError: Error 10060 connecting to redis-11886.c241.us-east-1-4.ec2.cloud.redislabs.com:18524. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.\n",
-      "2023-02-17 23:24:46,969 - root - INFO - Yue\n",
-      "2023-02-17 23:25:05,923 - root - INFO - Kevin\n",
-      "2023-02-17 23:26:23,435 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...\n",
-      "2023-02-17 23:26:23,435 - apscheduler.scheduler - INFO - Scheduler has been shut down\n"
-     ]
-    }
-   ],
-   "source": [
-    "from telegram import Update\n",
-    "from telegram.ext import Updater, MessageHandler, Filters,CallbackContext,CommandHandler\n",
-    "# The messageHandler is used for all message updates\n",
-    "import configparser\n",
-    "import logging\n",
-    "import redis\n",
-    "\n",
-    "global redis1\n",
-    "\n",
-    "def main():\n",
-    "    # Load your token and create an Updater for your Bot\n",
-    "    config = configparser.ConfigParser()\n",
-    "    config.read('config.ini')\n",
-    "    updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True)\n",
-    "    dispatcher = updater.dispatcher\n",
-    "    \n",
-    "    global redis1\n",
-    "    redis1 = redis.Redis(host=(config['REDIS']['HOST']), password=(config['REDIS']['PASSWORD']), port=(config['REDIS']['REDISPORT']))\n",
-    "    \n",
-    "    # You can set this logging module, so you will know when and why things do not work as expected\n",
-    "    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)\n",
-    "    \n",
-    "    # register a dispatcher to handle message: here we register an echo dispatcher\n",
-    "    echo_handler = MessageHandler(Filters.text & (~Filters.command), echo)\n",
-    "    dispatcher.add_handler(echo_handler)\n",
-    "    \n",
-    "    # on different commands - answer in Telegram\n",
-    "    dispatcher.add_handler(CommandHandler(\"add\", add))\n",
-    "    dispatcher.add_handler(CommandHandler(\"help\", help_command))\n",
-    "    dispatcher.add_handler(CommandHandler(\"hello\", hello_command))\n",
-    "                           \n",
-    "    # To start the bot:\n",
-    "    updater.start_polling()\n",
-    "    updater.idle()\n",
-    "    \n",
-    "def echo(update, context):\n",
-    "    reply_message = update.message.text.upper()\n",
-    "    logging.info(\"Update: \" + str(update))\n",
-    "    logging.info(\"context: \" + str(context))\n",
-    "    context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)\n",
-    "                           \n",
-    "def help_command(update: Update, context: CallbackContext) -> None:\n",
-    "    \"\"\"Send a message when the command /help is issued.\"\"\"\n",
-    "    update.message.reply_text('Helping you helping you.')\n",
-    "                           \n",
-    "def add(update: Update, context: CallbackContext) -> None:\n",
-    "    \"\"\"Send a message when the command /add is issued.\"\"\"\n",
-    "    try:\n",
-    "        global redis1\n",
-    "        logging.info(context.args[0])\n",
-    "        msg = context.args[0] # /add keyword <-- this should store the keyword\n",
-    "        redis1.incr(msg)\n",
-    "        update.message.reply_text('You have said ' + msg + ' for ' +\n",
-    "                                  redis1.get(msg).decode('UTF-8') + ' times.')\n",
-    "    except (IndexError, ValueError):\n",
-    "        update.message.reply_text('Usage: /add <keyword>')  \n",
-    "\n",
-    "def hello_command(update: Update, context: CallbackContext) -> None:\n",
-    "    \"\"\"Send a message when the command /hello is issued.\"\"\"\n",
-    "    try:\n",
-    "        global redis1\n",
-    "        logging.info(context.args[0])\n",
-    "        msg = context.args[0] # /add keyword <-- this should store the keyword\n",
-    "        update.message.reply_text('Good day,' + msg + ' ! ')\n",
-    "    except (IndexError, ValueError):\n",
-    "        update.message.reply_text('Usage: /hello <keyword>')  \n",
-    "                           \n",
-    "                           \n",
-    "if __name__ == '__main__':\n",
-    "    main()\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "406bc7e8",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.9.12"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+from telegram import Update
+from telegram.ext import Updater, MessageHandler, Filters,CallbackContext,CommandHandler
+# The messageHandler is used for all message updates
+import configparser
+import logging
+import redis
+
+global redis1
+
+def main():
+    # Load your token and create an Updater for your Bot
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    updater = Updater(token=(config['TELEGRAM']['ACCESS_TOKEN']), use_context=True)
+    dispatcher = updater.dispatcher
+    
+    global redis1
+    redis1 = redis.Redis(host=(config['REDIS']['HOST']), password=(config['REDIS']['PASSWORD']), port=(config['REDIS']['REDISPORT']))
+    
+    # You can set this logging module, so you will know when and why things do not work as expected
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
+    
+    # register a dispatcher to handle message: here we register an echo dispatcher
+    echo_handler = MessageHandler(Filters.text & (~Filters.command), echo)
+    dispatcher.add_handler(echo_handler)
+    
+    # on different commands - answer in Telegram
+    dispatcher.add_handler(CommandHandler("add", add))
+    dispatcher.add_handler(CommandHandler("help", help_command))
+    dispatcher.add_handler(CommandHandler("hello", hello_command))
+                           
+    # To start the bot:
+    updater.start_polling()
+    updater.idle()
+    
+def echo(update, context):
+    reply_message = update.message.text.upper()
+    logging.info("Update: " + str(update))
+    logging.info("context: " + str(context))
+    context.bot.send_message(chat_id=update.effective_chat.id, text= reply_message)
+                           
+def help_command(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /help is issued."""
+    update.message.reply_text('Helping you helping you.')
+                           
+def add(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /add is issued."""
+    try:
+        global redis1
+        logging.info(context.args[0])
+        msg = context.args[0] # /add keyword <-- this should store the keyword
+        redis1.incr(msg)
+        update.message.reply_text('You have said ' + msg + ' for ' +
+                                  redis1.get(msg).decode('UTF-8') + ' times.')
+    except (IndexError, ValueError):
+        update.message.reply_text('Usage: /add <keyword>')  
+
+def hello_command(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /hello is issued."""
+    try:
+        global redis1
+        logging.info(context.args[0])
+        msg = context.args[0] # /add keyword <-- this should store the keyword
+        update.message.reply_text('Good day,' + msg + ' ! ')
+    except (IndexError, ValueError):
+        update.message.reply_text('Usage: /hello <keyword>')  
+                           
+                           
+if __name__ == '__main__':
+    main()
